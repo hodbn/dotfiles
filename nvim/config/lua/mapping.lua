@@ -1,3 +1,9 @@
+-- Remap leader
+vim.g.mapleader = ","
+
+-- Remap escape
+vim.keymap.set("i", "kj", "<Esc>", { noremap = true })
+
 -- Using tmux/screen with ctrl-a 
 vim.keymap.set('n', '+', '<C-a>', { noremap = true })
 vim.keymap.set('n', '-', '<C-x>', { noremap = true })
