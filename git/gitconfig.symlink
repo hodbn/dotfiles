@@ -1,31 +1,19 @@
 [user]
-        name = Or Elimelech
-	email = vic3lord@users.noreply.github.com
-	signingKey = ~/.ssh/id_ed25519
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	allowedSignersFile = ~/.git_signers
-[alias]
-	compare = log --oneline master..
-	author = shortlog -s -e
-	ci = commit
-	co = checkout
-	br = branch
-	st = status -s
-	edit = !nvim $(git ls-files -m) -p
-	flux = log --author="flux" --oneline
-	pr = !pull-request
-	wip = commit -am 'wip'
-	web = !gh pr view -w
-[push]
-	default = simple
-[color]
-	ui = true
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+name = Hod Bin Noon
+
+[includeIf "gitdir:~/tannin/"]
+    path = ~/tannin/.gitconfig
+[includeIf "gitdir:~/personal/"]
+    path = ~/personal/.gitconfig
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[mergetool "vimdiff"]
+	path = nvim
 [merge]
 	tool = vimdiff
 [diff]
@@ -35,7 +23,16 @@
 [mergetool]
 	path = nvim
 	keepBackup = false
-[mergetool "vimdiff"]
-	path = nvim
-[url "git@github.com:torqio"]
-	insteadOf = https://github.com/torqio
+[color]
+	ui = true
+[push]
+	default = simple
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[alias]
+	edit = !nvim $(git ls-files -m) -p
+	flux = log --author="flux" --oneline
+	pr = !pull-request
+	web = !gh pr view -w
