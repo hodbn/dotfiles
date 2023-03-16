@@ -19,6 +19,7 @@ setw -g monitor-activity on			# monitor window activity
 ## key bindings
 unbind C-b					# unbind CTRL-b
 bind C-a last-window				# bind C-a to the previously active window
+bind a send-prefix				# send CTRL-a when pressin CTRL-a a
 set -g status-keys vi				# bind vi key-mapping
 setw -g mode-keys vi				# vi-style controls for copy mode
 

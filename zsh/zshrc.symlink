@@ -30,6 +30,17 @@ bindkey '^h' backward-delete-char
 
 # ctrl-w removed word backwards
 bindkey '^w' backward-kill-word
+# ctrl-e goes to the end of line
+bindkey '^e' end-of-line
+# ctrl-a goes to the beginning of line
+bindkey '^a' beginning-of-line
+# ctrl-b goes one char backward
+bindkey '^b' backward-char
+# ctrl-f goes one char forward
+bindkey '^f' forward-char
+# esc-. inserts the last word
+bindkey -M viins '\e.' insert-last-word
+
 
 # ctrl-r starts searching history backward (overridden by fzf)
 # bindkey '^r' history-incremental-search-backward
