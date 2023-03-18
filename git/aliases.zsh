@@ -24,6 +24,9 @@ function changelog() {
 	fi
 }
 
+# adapted from oh-my-zsh
+# some utility functions and then aliases
+
 git_current_branch () {
         local ref
         ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null) 
@@ -36,7 +39,15 @@ git_current_branch () {
         echo ${ref#refs/heads/}
 }
 
-# https://gist.github.com/filidorwiese/d228588ee8023c6fdfb24c85979172ab
+function git_main_branch() {
+  if [[ -n "$(git branch --list main)" ]]; then
+  # -n: True if length of string output is non-zero
+    echo main
+  else
+    echo master
+  fi
+}
+
 alias g=git
 alias ga='git add'
 alias gaa='git add --all'
@@ -44,7 +55,7 @@ alias gapa='git add --patch'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
-alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|main|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
@@ -65,7 +76,7 @@ alias gcd='git checkout develop'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
 alias gclean='git clean -fd'
-alias gcm='git checkout master'
+alias gcm='git checkout $(git_main_branch)'
 alias gcmsg='git commit -m'
 alias 'gcn!'='git commit -v --no-edit --amend'
 alias gco='git checkout'
@@ -91,7 +102,7 @@ alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias ghh='git help'
 alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
-alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
+alias git-svn-dcommit-push='git svn dcommit && git push github $(git_main_branch):svntrunk'
 alias gk='\gitk --all --branches'
 alias gke='\gitk --all $(git log -g --pretty=%h)'
 alias gl='git pull'
@@ -106,12 +117,12 @@ alias gloga='git log --oneline --decorate --graph --all'
 alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all'
 alias glp=_git_log_prettily
-alias glum='git pull upstream master'
+alias glum='git pull upstream $(git_main_branch)'
 alias gm='git merge'
-alias gmom='git merge origin/master'
+alias gmom='git merge origin/$(git_main_branch)'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
-alias gmum='git merge upstream/master'
+alias gmum='git merge upstream/$(git_main_branch)'
 alias gp='git push'
 alias gpd='git push --dry-run'
 alias gpoat='git push origin --all && git push origin --tags'
@@ -125,7 +136,7 @@ alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
-alias grbm='git rebase master'
+alias grbm='git rebase $(git_main_branch)'
 alias grbs='git rebase --skip'
 alias grep='grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias grh='git reset HEAD'
