@@ -23,6 +23,9 @@ name = Hod Bin Noon
 [mergetool]
 	path = nvim
 	keepBackup = false
+[mergetool "vimdiff"]
+	layout = "(LOCAL,REMOTE)/MERGED"
+	trustExitCode = false
 [color]
 	ui = true
 [push]
