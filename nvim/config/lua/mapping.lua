@@ -36,6 +36,10 @@ vim.keymap.set('n', '<leader>B', ':lua require"dap".set_breakpoint(vim.fn.input(
 vim.keymap.set('n', '<leader>dc', ':lua require"dap".clear_breakpoints()<CR>', opts)
 vim.keymap.set('n', '<leader>dt', ':lua require"dap-go".debug_test()<CR>', opts)
 
+-- mergetool
+vim.keymap.set('n', '<leader>dgl', ':diffget LOCAL<CR>', opts)
+vim.keymap.set('n', '<leader>dgr', ':diffget REMOTE<CR>', opts)
+
 -- nvim-test
 vim.keymap.set('n', '<leader>tf', ':TestFile<CR>', opts)
 vim.keymap.set('n', '<leader>tt', ':TestNearest<CR>', opts)
