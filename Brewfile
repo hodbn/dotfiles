@@ -9,6 +9,7 @@ tap 'bufbuild/buf'
 # Brews
 brew 'age'
 brew 'ansible'
+brew 'awscli'
 brew 'bat'
 brew 'buf'
 brew 'crane'
