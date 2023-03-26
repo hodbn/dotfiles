@@ -32,3 +32,4 @@ select-word-style bash
 # bring up menu selection
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+setopt no_complete_aliases
