@@ -10,6 +10,7 @@ lspconfig.yamlls.setup{}
 lspconfig.tsserver.setup{}
 lspconfig.eslint.setup{}
 lspconfig.prettier.setup{}
+lspconfig.pyright.setup{}
 lspconfig.tailwindcss.setup{}
 lspconfig.bashls.setup{}
 lspconfig.terraformls.setup{}

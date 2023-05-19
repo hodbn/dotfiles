@@ -4,6 +4,9 @@ if not null_ls_ok then
 end
 
 local sources = {
+  -- python
+  null_ls.builtins.formatting.black,
+  null_ls.builtins.formatting.isort,
   -- js / ts
   null_ls.builtins.formatting.prettier,
 }
