@@ -38,6 +38,7 @@ brew 'neovim', args: ['HEAD']
 brew 'newsboat'
 brew 'nmap'
 brew 'node'
+brew 'pyenv'
 brew 'qpdf'
 brew 'ripgrep'
 brew 'rust'
