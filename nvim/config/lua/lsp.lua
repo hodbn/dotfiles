@@ -12,3 +12,4 @@ lspconfig.eslint.setup{}
 lspconfig.bashls.setup{}
 lspconfig.terraformls.setup{}
 lspconfig.sqls.setup{}
+lspconfig.svelte.setup{}
