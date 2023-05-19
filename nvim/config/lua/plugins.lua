@@ -71,6 +71,13 @@ return require('packer').startup(function()
     config = function() require('mason').setup{} end
   }
 
+  use { "jose-elias-alvarez/null-ls.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("null")
+    end
+  }
+
   use {
     'ray-x/lsp_signature.nvim',
     config = function()
