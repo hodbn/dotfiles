@@ -15,3 +15,4 @@ lspconfig.bashls.setup{}
 lspconfig.terraformls.setup{}
 lspconfig.sqlls.setup{}
 lspconfig.svelte.setup{}
+lspconfig.golangci_lint_ls.setup{filetypes = {'go','gomod'}}
