@@ -14,5 +14,5 @@ lspconfig.pyright.setup{}
 lspconfig.tailwindcss.setup{}
 lspconfig.bashls.setup{}
 lspconfig.terraformls.setup{}
-lspconfig.sqls.setup{}
+lspconfig.sqlls.setup{}
 lspconfig.svelte.setup{}
