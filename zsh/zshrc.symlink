@@ -17,7 +17,9 @@ zstyle ':completion:*' special-dirs true
 
 # vi-mode
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=10
+# vi-mode escape
+bindkey -M viins 'kj' vi-cmd-mode
 
 # Use vim cli mode
 bindkey '^P' up-history
