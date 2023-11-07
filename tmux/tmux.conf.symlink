@@ -82,7 +82,7 @@ set -g display-panes-colour colour237
 set -g status-justify "left"
 set -g status-left-style none
 set -g status-left-length 80
-set -g status-left "#[fg=colour248,bg=colour241] #I:#P #[fg=colour241,bg=colour237,nobold,noitalics,nounderscore] "
+set -g status-left "#[fg=colour248,bg=colour241] #{p2:window_index}:#{p2:pane_index} #[fg=colour241,bg=colour237,nobold,noitalics,nounderscore] "
 
 # right
 set -g status-right-style none
