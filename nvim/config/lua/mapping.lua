@@ -25,6 +25,7 @@ vim.keymap.set('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
 vim.keymap.set('n', '[d', ':lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.keymap.set('n', ']d', ':lua vim.diagnostic.goto_next()<CR>', opts)
 vim.keymap.set('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>', opts)
+vim.keymap.set('n', '<leader>dd', ':LspDiagnosticsAll<CR>', opts)
 vim.keymap.set('n', '<leader>cl', ':lua vim.lsp.codelens.run()<CR>', opts)
 vim.keymap.set('n', '<leader>f', function()
   vim.lsp.buf.format { async = true }
@@ -59,7 +60,8 @@ vim.keymap.set('n', '<leader>l', ':Lines<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>gs', ':GFiles?<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>C', ':Commits<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>c', ':BCommits<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>g', ':Rg<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>rg', ':Rg<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>rw', [[':Rg ' . expand('<cword>') . '<CR>']], { noremap = true, expr = true })
 
 -- Quickfix
 vim.keymap.set('', '<C-n>', ':cnext<CR>', {})
