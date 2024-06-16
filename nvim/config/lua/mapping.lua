@@ -4,6 +4,9 @@ vim.g.mapleader = ","
 -- Remap escape
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true })
 
+-- Remap save
+vim.keymap.set('n', '<leader>w', ':w<CR>', opts)
+
 -- Using tmux/screen with ctrl-a 
 vim.keymap.set('n', '+', '<C-a>', { noremap = true })
 vim.keymap.set('n', '-', '<C-x>', { noremap = true })
