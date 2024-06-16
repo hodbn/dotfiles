@@ -64,7 +64,7 @@ vim.keymap.set('n', '<leader>gs', ':GFiles?<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>C', ':Commits<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>c', ':BCommits<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>rg', ':Rg<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>rw', [[':Rg ' . expand('<cword>') . '<CR>']], { noremap = true, expr = true })
+vim.keymap.set('n', '<leader>rw', ':Rg <C-R><C-W><CR>', { noremap = true })
 
 -- Quickfix
 vim.keymap.set('', '<C-n>', ':cnext<CR>', {})
