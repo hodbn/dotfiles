@@ -151,6 +151,9 @@ return require('packer').startup(function()
   use {
     'mfussenegger/nvim-dap',
   }
+  use {
+	  'nvim-neotest/nvim-nio'
+  }
 
   use {
     'leoluz/nvim-dap-go',
@@ -166,6 +169,7 @@ return require('packer').startup(function()
     'rcarriga/nvim-dap-ui',
     requires = {
       { 'mfussenegger/nvim-dap' },
+      { 'nvim-neotest/nvim-nio' },
     },
     config = function()
       require('dapui').setup()
