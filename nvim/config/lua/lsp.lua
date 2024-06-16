@@ -7,7 +7,13 @@ lspconfig.html.setup{}
 lspconfig.cssls.setup{}
 lspconfig.vuels.setup{}
 lspconfig.yamlls.setup{}
-lspconfig.tsserver.setup{}
+lspconfig.tsserver.setup{
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    },
+  },
+}
 lspconfig.eslint.setup{}
 lspconfig.pyright.setup{}
 lspconfig.tailwindcss.setup{}
