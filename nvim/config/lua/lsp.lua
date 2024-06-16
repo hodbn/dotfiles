@@ -22,3 +22,4 @@ lspconfig.terraformls.setup{}
 lspconfig.sqlls.setup{}
 lspconfig.svelte.setup{}
 lspconfig.golangci_lint_ls.setup{filetypes = {'go','gomod'}}
+lspconfig.ruff_lsp.setup{}
