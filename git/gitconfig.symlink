@@ -1,6 +1,11 @@
 [user]
 	name = hodbn
 	email = 2493157+hodbn@users.noreply.github.com
+	signingKey = ~/.ssh/id_rsa
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.git_signers
 
 [includeIf "gitdir:~/tannin/"]
     path = ~/tannin/.gitconfig
@@ -19,6 +24,7 @@
 	trustExitCode = false
 [merge]
 	tool = vimdiff
+	conflictStyle = zdiff3
 [diff]
 	tool = vimdiff
 [difftool]
@@ -26,7 +32,6 @@
 [mergetool]
 	path = nvim
 	keepBackup = false
-[mergetool "vimdiff"]
 [color]
 	ui = true
 [push]

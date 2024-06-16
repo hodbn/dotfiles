@@ -1,74 +1,67 @@
--- vim-plug
-vim.cmd.packadd('packer.nvim')
-return require('packer').startup(function()
-  -- Packer manages itself
-  use 'wbthomason/packer.nvim'
-
+return {
   -- Themes
-  use 'rafamadriz/themes.nvim'
+  "rafamadriz/themes.nvim",
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    config = function() require('lualine').setup{} end
-  }
+  "RRethy/nvim-base16",
 
-  use {
-    'onsails/lspkind-nvim',
-    requires = { { 'kyazdani42/nvim-web-devicons' } },
-  } 
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {},
+  },
+
+  {
+    "onsails/lspkind-nvim",
+    dependencies = { "kyazdani42/nvim-web-devicons" },
+  },
 
   -- Common stuff
-  use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-repeat'
-  use 'tpope/vim-fugitive' -- Git client
-  use 'tpope/vim-unimpaired'
-  use 'tpope/vim-dadbod' -- Database client
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- update commentstring based on treesitter
-  use 'f-person/git-blame.nvim'
-  use 'vitapluvia/vim-gurl' -- Github URL to clipboard
-  use 'editorconfig/editorconfig-vim'
-  use 'junegunn/limelight.vim'
-  use 'junegunn/goyo.vim'
-  use 'godlygeek/tabular'
+  "tpope/vim-surround",
+  "tpope/vim-repeat",
+  "tpope/vim-fugitive", -- Git client
+  "tpope/vim-unimpaired",
+  "tpope/vim-dadbod", -- Database client
+  "f-person/git-blame.nvim",
+  "vitapluvia/vim-gurl", -- Github URL to clipboard
+  "junegunn/limelight.vim",
+  "junegunn/goyo.vim",
+  "godlygeek/tabular",
 
   -- Search and navigation
-  use {
-    vim.trim(vim.fn.system('brew --prefix')) .. '/opt/fzf',
-    run = ":call fzf#install()",
-    requires = { { 'junegunn/fzf.vim' } },
-  }
+  {
+    "junegunn/fzf.vim",
+    dependencies = { { "junegunn/fzf", build = "./install --all" } },
+  },
 
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = { { 'kyazdani42/nvim-web-devicons' } },
-    config = function() require'nvim-tree'.setup {} end
-  }
+  {
+    "kyazdani42/nvim-tree.lua",
+    dependencies = { "kyazdani42/nvim-web-devicons" },
+    opts = {},
+  },
 
-  use {
-    'ojroques/nvim-lspfuzzy',
-    config = function() require('lspfuzzy').setup{} end
-  }
+  {
+    "ojroques/nvim-lspfuzzy",
+    opts = {},
+  },
 
-  use 'unblevable/quick-scope'
-  use 'google/vim-searchindex'
+  "unblevable/quick-scope",
+  "google/vim-searchindex",
 
   -- Completion, lint, fix
-  use 'jiangmiao/auto-pairs'
+  "jiangmiao/auto-pairs",
 
-  use 'github/copilot.vim'
+  "github/copilot.vim",
 
-  use {
-    'Shougo/neosnippet.vim',
-    requires = { { 'Shougo/neosnippet-snippets' } },
-  }
+  {
+    "Shougo/neosnippet.vim",
+    dependencies = { "Shougo/neosnippet-snippets" },
+  },
 
-  use { 'neovim/nvim-lspconfig' }
+  "neovim/nvim-lspconfig",
 
-  use {
-    'williamboman/mason.nvim',
-    config = function() require('mason').setup{} end
-  }
+  {
+    "williamboman/mason.nvim",
+    opts = {},
+  },
 
   use { "jose-elias-alvarez/null-ls.nvim",
     requires = { "nvim-lua/plenary.nvim" },
@@ -77,45 +70,41 @@ return require('packer').startup(function()
     end
   }
 
-  use {
-    'ray-x/lsp_signature.nvim',
-    config = function()
-      require('lsp_signature').setup{
+  {
+    "ray-x/lsp_signature.nvim",
+    opts = {
         bind = true,
         doc_lines = 5,
         floating_window = true,
         hint_enable = false,
         handler_opts = {border = "single"},
         extra_trigger_chars = {"(", ","},
-      }
-    end
-  }
-
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-  }
-
-  use {
-    'nvim-treesitter/nvim-treesitter-context',
-    requires = {
-      { 'nvim-treesitter/nvim-treesitter' },
     },
-    config = function() require('treesitter-context').setup{} end
-  }
+  },
 
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'notomo/cmp-neosnippet' },
-      { 'ray-x/cmp-treesitter' },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "notomo/cmp-neosnippet",
+      "ray-x/cmp-treesitter",
     },
     config = function()
-      local lspkind = require('lspkind')
-      local cmp = require('cmp')
+      local lspkind = require("lspkind")
+      local cmp = require("cmp")
 
       cmp.setup({
         snippet = {
@@ -143,9 +132,8 @@ return require('packer').startup(function()
           format = lspkind.cmp_format()
         },
       })
-    end
-  }
-
+    end,
+  },
 
   -- DAP
   use {
@@ -177,36 +165,25 @@ return require('packer').startup(function()
   }
 
   
-  use {
-    'klen/nvim-test',
-    config = function()
-      require('nvim-test').setup{
-        termOpts = {
-          direction = "horizontal",
-          go_back = false,
-        },
-      }
-    end
-  }
+  -- Test
+  {
+    "klen/nvim-test",
+    opts = {
+      termOpts = {
+        direction = "horizontal",
+        go_back = false,
+      },
+    },
+  },
 
   -- Language specific plugins
-  use {
-    'hashivim/vim-terraform',
-    ft = { 'terraform' },
-  }
+  {
+    "hashivim/vim-terraform",
+    ft = { "terraform" },
+  },
 
-  use {
-    'rust-lang/rust.vim',
-    ft = { 'rust' },
-  }
-
-  use {
-    'elixir-lang/vim-elixir',
-    ft = { 'elixir' },
-  }
-
-  use {
-    'jjo/vim-cue',
-    ft = { 'cue' },
-  }
-end)
+  {
+    "rust-lang/rust.vim",
+    ft = { "rust" },
+  },
+}

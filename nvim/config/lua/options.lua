@@ -28,6 +28,7 @@ vim.opt.spell = false
 
 -- Set colorscheme
 vim.cmd.colorscheme('gruvbox')
+-- vim.cmd.colorscheme('base16-grayscale-dark')
 
 -- Rust
 vim.g.rustfmt_autosave = 1
