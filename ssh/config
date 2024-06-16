@@ -7,3 +7,6 @@ Host *
 Host planet.cs.biu.ac.il
   ProxyJump  binnooh@vpn.esc.biu.ac.il:2222
   ForwardAgent yes
+
+Host i-* mi-* account-vm-*
+  ProxyCommand ~/.ssh/aws-ssm-ec2-proxy-command.sh %h %r %p
