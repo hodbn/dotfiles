@@ -34,7 +34,6 @@ return require('packer').startup(function()
 
   -- Search and navigation
   use {
-    -- '/opt/homebrew/opt/fzf',
     vim.trim(vim.fn.system('brew --prefix')) .. '/opt/fzf',
     run = ":call fzf#install()",
     requires = { { 'junegunn/fzf.vim' } },
