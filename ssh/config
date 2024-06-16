@@ -3,3 +3,7 @@ Host *
   IgnoreUnknown AddKeysToAgent,UseKeychain
   UseKeychain yes
   AddKeysToAgent yes
+
+Host planet.cs.biu.ac.il
+  ProxyJump  binnooh@vpn.esc.biu.ac.il:2222
+  ForwardAgent yes
