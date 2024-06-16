@@ -102,3 +102,6 @@ set -g message-command-style bg=colour239,fg=colour223
 # swap windows
 bind-key -n C-S-Left swap-window -t -1\; select-window -t -1
 bind-key -n C-S-Right swap-window -t +1\; select-window -t +1
+
+# kill window
+bind q killw
