@@ -1,5 +1,6 @@
 [user]
-name = Hod Bin Noon
+	name = hodbn
+	email = 2493157+hodbn@users.noreply.github.com
 
 [includeIf "gitdir:~/tannin/"]
     path = ~/tannin/.gitconfig
