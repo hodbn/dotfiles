@@ -10,7 +10,7 @@ set -g history-limit 100000 			# large history
 set -g visual-bell on				# enable visual bell
 set -g allow-rename off				# disable window renaming
 set -g renumber-windows on 			# auto renumber when tab is deleted
-set -g base-index 1 				# start window index at 1
+# set -g base-index 1 				# start window index at 1
 set -g focus-events on
 setw -g pane-base-index 1 			# pane index at 1
 setw -g monitor-activity on			# monitor window activity
