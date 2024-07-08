@@ -63,13 +63,6 @@ return {
     opts = {},
   },
 
-  use { "jose-elias-alvarez/null-ls.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("null")
-    end
-  }
-
   {
     "ray-x/lsp_signature.nvim",
     opts = {
@@ -89,6 +82,12 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter-context",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+  },
+
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = {},
   },
@@ -135,36 +134,6 @@ return {
     end,
   },
 
-  -- DAP
-  use {
-    'mfussenegger/nvim-dap',
-  }
-  use {
-	  'nvim-neotest/nvim-nio'
-  }
-
-  use {
-    'leoluz/nvim-dap-go',
-    requires = {
-      { 'mfussenegger/nvim-dap' },
-    },
-    config = function()
-      require('dap-go').setup()
-    end
-  }
-
-  use {
-    'rcarriga/nvim-dap-ui',
-    requires = {
-      { 'mfussenegger/nvim-dap' },
-      { 'nvim-neotest/nvim-nio' },
-    },
-    config = function()
-      require('dapui').setup()
-    end
-  }
-
-  
   -- Test
   {
     "klen/nvim-test",

@@ -84,3 +84,5 @@ done
 
 unset config_files
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
