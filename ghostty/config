@@ -1,0 +1,6 @@
+font-size = 15
+font-family = "Hack Nerd Font Mono"
+font-family-bold = "Hack Nerd Font Mono"
+font-family-italic = "Hack Nerd Font Mono"
+macos-option-as-alt = true
+theme = "GruvboxDarkHard"
