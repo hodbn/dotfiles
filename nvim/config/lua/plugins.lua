@@ -1,8 +1,9 @@
 return {
   -- Themes
-  "rafamadriz/themes.nvim",
-
-  "RRethy/nvim-base16",
+  -- "rafamadriz/themes.nvim",
+  -- "morhetz/gruvbox",
+  -- "RRethy/nvim-base16",
+  "ellisonleao/gruvbox.nvim",
 
   {
     "nvim-lualine/lualine.nvim",
