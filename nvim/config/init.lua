@@ -3,6 +3,7 @@ require('lazy_bootstrap')
 require('options')
 require('treesitter')
 require('lsp')
+require('avante')
 
 vim.cmd [[
 	autocmd! User GoyoEnter Limelight

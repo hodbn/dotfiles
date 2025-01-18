@@ -160,4 +160,20 @@ return {
     build = { "yarn install --frozen-lockfile --production" },
     ft = { "typescriptreact" },
   },
+
+  -- AI
+  {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    lazy = false,
+    version = "v0.0.9", -- set this if you want to always pull the latest change
+    opts = {},
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+  }
 }
