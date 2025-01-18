@@ -63,7 +63,7 @@ brew 'nmap'
 brew 'node'
 brew 'openjdk'
 brew 'p7zip'
-brew 'pam_reattach'
+brew 'pam-reattach'
 brew 'pyenv'
 brew 'podman'
 brew 'postgresql@14', link: false
