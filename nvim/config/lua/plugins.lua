@@ -49,7 +49,7 @@ return {
   -- Completion, lint, fix
   "jiangmiao/auto-pairs",
 
-  "github/copilot.vim",
+  -- "github/copilot.vim",
 
   {
     "Shougo/neosnippet.vim",
