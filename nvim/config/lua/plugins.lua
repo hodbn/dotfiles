@@ -155,4 +155,9 @@ return {
     "rust-lang/rust.vim",
     ft = { "rust" },
   },
+  {
+    "prettier/vim-prettier",
+    build = { "yarn install --frozen-lockfile --production" },
+    ft = { "typescriptreact" },
+  },
 }

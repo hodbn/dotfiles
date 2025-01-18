@@ -36,6 +36,11 @@ vim.g.rustfmt_autosave = 1
 -- Terraform
 vim.g.terraform_fmt_on_save = 1
 
+-- Prettier
+vim.g['prettier#autoformat_config_present'] = 1
+vim.g['prettier#autoformat_require_pragma'] = 0
+vim.g['prettier#autoformat_config_files'] = {"prettier.config.js"}
+
 -- Limelight
 vim.g.limelight_conceal_ctermfg = 'gray'
 vim.g.limelight_conceal_ctermfg = 240
