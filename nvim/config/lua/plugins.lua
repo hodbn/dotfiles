@@ -29,18 +29,14 @@ return {
 
   -- Search and navigation
   {
-    "junegunn/fzf.vim",
-    dependencies = { { "junegunn/fzf", build = "./install --all" } },
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {}
   },
 
   {
     "kyazdani42/nvim-tree.lua",
     dependencies = { "kyazdani42/nvim-web-devicons" },
-    opts = {},
-  },
-
-  {
-    "ojroques/nvim-lspfuzzy",
     opts = {},
   },
 

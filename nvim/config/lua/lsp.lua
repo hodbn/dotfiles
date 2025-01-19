@@ -24,3 +24,12 @@ lspconfig.svelte.setup{}
 lspconfig.golangci_lint_ls.setup{filetypes = {'go','gomod'}}
 lspconfig.pylsp.setup{}
 lspconfig.ast_grep.setup{}
+
+-- FZF with LSP
+require('fzf-lua').setup({
+  'fzf-vim',
+  fzf_colors = true,
+  winopts = {
+    fullscreen = true
+  }
+})
