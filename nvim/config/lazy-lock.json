@@ -1,6 +1,6 @@
 {
   "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
-  "avante.nvim": { "branch": "main", "commit": "1e8abbf798f987a12fd931a2d44403f8fa04c2db" },
+  "avante.nvim": { "branch": "main", "commit": "e98fa46becb7d6cd108a94c1fbf4348d8c44a8b1" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-neosnippet": { "branch": "main", "commit": "2d14526af3f02dcea738b4cea520e6ce55c09979" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
