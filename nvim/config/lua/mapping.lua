@@ -63,7 +63,7 @@ vim.keymap.set('n', '<leader>l', ':Lines<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>gs', ':GFiles?<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>C', ':Commits<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>c', ':BCommits<CR>', { noremap = true })
-vim.keymap.set('n', '<leader>rg', ':FzfLua live_grep_native<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>rg', ':FzfLua grep_project<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>rw', ':Rg <C-R><C-W><CR>', { noremap = true })
 
 -- Quickfix
