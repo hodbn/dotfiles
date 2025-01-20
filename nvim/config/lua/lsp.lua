@@ -30,6 +30,23 @@ require('fzf-lua').setup({
   'fzf-vim',
   fzf_colors = true,
   winopts = {
-    fullscreen = true
+    fullscreen = true,
+    preview = {
+      hidden = false
+    }
+  },
+  previewers = {
+    builtin = {
+      extensions = {
+        ["png"] = { "viu", "-b" },
+        ["gif"] = { "viu", "-b" },
+        -- ["jpg"] = { "ueberzug" },
+      },
+      -- When using 'ueberzug' we can also control the way images
+      -- fill the preview area with ueberzug's image scaler, set to:
+      --   false (no scaling), "crop", "distort", "fit_contain",
+      --   "contain", "forced_cover", "cover"
+      -- ueberzug_scaler = "cover",
+    }
   }
 })
